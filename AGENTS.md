@@ -27,7 +27,7 @@
 - `boms/bom.csv` — 与 02 同步的机读清单
 - `logs/工作日志.md` — 每次动手记一行
 - `code/firmware/` — ESP32-S3 固件
-- `code/miniapp/` — 微信小程序（BLE 控制端）
+- `code/app/` — 微信小程序（BLE 控制端）
 
 ## 技术栈
 ESP32-S3（Arduino/ESP-IDF 皆可）+ ST7796/ILI9488 SPI 屏 + GB2312 点阵字库 + nRF24L01 + MicroSD(FATFS) + 微信小程序 BLE。

@@ -1,4 +1,4 @@
-# 微信小程序（BLE 控制端）
+# Android App（BLE 控制端）
 
 计划页面：
 - `pages/index`：设备扫描/连接、状态显示
