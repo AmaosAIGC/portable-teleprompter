@@ -3,3 +3,7 @@
 build/
 .pio/
 node_modules/
+
+# 含个人信息，不公开
+docs/任务书-*.docx
+docs/任务书*.docx
