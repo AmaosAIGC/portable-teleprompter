@@ -1,7 +1,7 @@
-# 便携式提词器与脚本同步系统（毕设版）
+# 便携式提词器与脚本同步系统
 
-> Portable Teleprompter & Script Sync System — 武汉传媒学院 电子信息工程 毕业设计
-> 题目：便携式提词器与脚本同步系统 ｜ 指导教师：李文 ｜ 状态：开发中
+> Portable Teleprompter & Script Sync System
+> 状态：开发中
 
 基于 **ESP32-WROOM-32E** 的低成本便携提词器：2.8 寸 TFT 显示、编码器调速与平滑滚动、BLE 手机 App 控制、蓝牙遥控、TF 卡脚本管理，配合 45° 分光镜结构，面向学生剧组拍摄与短视频口播场景。
 
