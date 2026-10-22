@@ -1,5 +1,7 @@
 # 便携式提词器与脚本同步系统
 
+> 🚧 **项目进行中** — 本文件随开发实时更新，预计 **2 个月内**完成作品。
+
 > Portable Teleprompter & Script Sync System
 > 状态：开发中
 
