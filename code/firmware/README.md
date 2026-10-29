@@ -1,17 +1,20 @@
-# 固件（ESP32-S3）
+# 固件（STM32F103C8T6）
+
+推荐 PlatformIO（framework = stm32cube）或 Keil MDK + 标准外设库。
 
 计划结构：
 ```
 src/
-  main.cpp              入口与任务创建
-  display/st7796.cpp    屏驱动（SPI + DMA）
-  font/gb2312.cpp       字库寻址与编码转换
-  render/text_view.cpp  文本窗口渲染
-  engine/scroll.cpp     滚动引擎（px/s 模型）
-  input/encoder.cpp     EC11 + 按键消抖
-  storage/scripts.cpp   FATFS 多脚本管理
-  ble/gatt.cpp          BLE 服务与命令分发
-  radio/nrf24.cpp       2.4G 遥控
-  app/state.cpp         状态机
+  main.c              初始化 + 主循环状态机
+  bsp/spi.c           SPI1（18MHz）
+  bsp/st7789.c        屏驱动：初始化、窗口、填充、MADCTL、VSCRDEF/VSCRSADD
+  bsp/w25q64.c        Flash 读写擦、JEDEC 校验
+  bsp/usart.c         USART1 + IDLE 中断 + DMA
+  bsp/encoder.c       EC11 正交解码 + 按键消抖
+  font/gb2312.c       编码转换 + 区位码寻址
+  ui/render.c         行条带渲染
+  engine/scroll.c     像素级滚动引擎
+  app/script.c        多脚本存储与切换
+  app/proto.c         帧解析 / CRC8
 ```
-构建：PlatformIO（推荐）或 Arduino IDE。目标芯片 esp32-s3，PSRAM 开启。
+构建注意：开启 `-O2`；栈 ≥1KB；HSE 8MHz 外部晶振；SysTick 1ms。
